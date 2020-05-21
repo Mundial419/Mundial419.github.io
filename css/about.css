@@ -1,0 +1,27 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-size: 1.3em;
+	}
+	
+#about {
+	position: relative;
+	top: 100px;
+	font-family: Courgette;
+	}
+	
+.color-cyan {
+	color: dark;
+	}
+	
+hr {
+	background-color: black;
+	}
+	
+
+#social-links {
+	font-size: 1.5em;
+	}

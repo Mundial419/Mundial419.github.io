@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+  		   <link rel="stylesheet" href="css/style.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<script src="https://kit.fontawesome.com/19c4712e44.js" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" type="text/javascript"></script> 
+    	   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      	 <script src="js/storage.js" type="text/javascript"></script>
+		  <script src="js/theme.js" type="text/javascript"></script>
+			
+    </head>
+ 	<body id="top" >
+		<nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark"  id="mainNav">
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#top">MVP STACK</a>
+				<i class="navbar-toggler navbar-toggler-right fas fa-caret-down" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation" ></i>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav text-uppercase text-uppercase">
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://mvprepublic.com" style="border-bottom:2px solid cyan;">Home</a></li>
+						
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">File</a>
+							<div class="dropdown-menu" aria-labelledby="navDropdown">
+								<a class="dropdown-item" id="save" onclick="save()">Save</a>
+								<a class="dropdown-item" onclick="reset()">Reset</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" data-toggle="modal" data-target="#basicExampleModall">Go to Line</a>
+							<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#settings">Settings</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="how-to.html">How-To Guide</a></li>
+					<!--	<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">Theme</a></li> -->
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="about.html">About</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact_form/contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section id="headline">
+		<div class="row bg-dark text-info">
+			<div class="oya">
+				<p id="ht">HTML     <span class="social-spanner"></span><i class="fas fa-microphone-alt" onclick="startVoice()"></i></p>
+			</div>
+			<div class="oya">
+				<p id="cs">CSS</p>
+			</div>
+			<div class="oya">
+				<p id="js">JAVASCRIPT</p>
+			</div>
+			</div>
+		</section>
+		
+				<section id="namer">
+								<div id="htmleditor" oninput="unsave()" onchange="trackChangeH()">
+									
+								</div>
+								<div id="csseditor" oninput="unsave()" onchange="trackChangeC()">
+								
+								</div>
+								<div id="jseditor" oninput="unsave()" onchange="trackChangeJ()">
+								
+								</div>
+				</section>
+						
+					<div id="toolsDiv" class="container-fluid  bg-dark">
+						<div class="row ">
+							<div class="col-3"><i class="fas fa-undo-alt color-cyan d-flex justify-content-center" id="un" onclick="undo()"></i></div>
+							<div class="col-3"><i class="fas fa-redo-alt color-cyan d-flex justify-content-center" id="re" onclick="redo()"></i></div>
+							<div class="col-3"><i class="fas fa-search color-cyan d-flex justify-content-center" data-toggle="modal" data-target="#basicExampleModal" onclick="find()"></i></div>
+							<div class="col-3"><i class="fas fa-save color-cyan d-flex justify-content-center" onclick="save()"></i></div>
+						</div>
+					</div>
+					
+<!-- Modal -->
+<div class="modal fade bg-dark" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-info">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Find & Replace</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-info" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input id="find" class="text-info bg-dark" type="text" placeholder="Find">
+		<span></span>
+		<input class="text-info bg-dark" id="replace" type="text" placeholder="Replace">
+      </div>
+      <div class="modal-footer">
+		<input type="checkbox" id="checkF">Find All</input>
+		<button type="button" class="btn btn-info" onclick="find()" data-dismiss="modal" >Find</button>
+        <button type="button" class="btn btn-info" data-dismiss="modal" onclick="replace()">Replace</button>
+			<input type="checkbox" id="checkR">Replace All</input>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade bg-dark" id="basicExampleModall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabell"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-info">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabell">Go to Line</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-info" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input id="goto" class="text-info bg-dark" type="text" placeholder="Line Number">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal" onclick="goTo()">Go</button>
+			
+      </div>
+    </div>
+  </div>
+</div>
+		<iframe id="iframe" frameBorder="0">
+			
+		</iframe>
+			<!--
+		<footer  id="footer">
+			<div class="container-fluid bg-dark text-uppercase">
+				<div class="row">
+				
+					<div class="col-3 text-info">
+						
+						<ul id="foot-list">
+						<li><a href="#">Documentation</a></li>
+							<li><a href="#">Syntax Highlights</a></li>
+							<li><a href="#">How-To Guide</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-3 text-info">
+						
+						<ul id="foot-list">
+						<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Settings</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-3 text-info">
+						
+						<ul id="foot-list">
+						<li><a href="#">Blog</a></li>
+							<li><a href="#">Social Media</a></li>
+							<li><a href="#">Suggestions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		-->
+		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/tools.js" type="text/javascript"></script>
+		<script src="js/attribute_functions.js" type="text/javascript"></script>
+    	<script src="js/elements.js" type="text/javascript"></script>
+   		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+		
+	</body>
+</html>

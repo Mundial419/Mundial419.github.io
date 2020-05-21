@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+  		   <link rel="stylesheet" href="css/theme.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+			<script src="https://kit.fontawesome.com/19c4712e44.js" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" type="text/javascript"></script> 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+    </head>
+ 	<body id="top" class="bg-light" >
+		<nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark"  id="mainNav">
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#top">MVP STACK</a>
+				<i class="navbar-toggler navbar-toggler-right fas fa-caret-down" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Navigation" ></i>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav text-uppercase text-uppercase">
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://mvprepublic.com">Home</a></li>
+						
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Editor</a>
+							<div class="dropdown-menu" aria-labelledby="navDropdown">
+								
+								<a class="dropdown-item" href="/">Back to Editor </a>
+								<a class="dropdown-item" href="settings.html">Settings</a>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="how-to.html">How-To Guide</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="theme.html" style="border-bottom: 2px solid cyan;">Theme</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="about.html">About</a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div id="theme" class="container text-center">
+			<h1 class="text-info">THEMES</h1>
+			<br></br>
+			
+			<div class="row">
+				<div id="ambiance" class="col-6 d-flex justify-content-start">
+					ambiance
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="chaos" class="col-6 d-flex justify-content-start">
+					chaos
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="chrome" class="col-6 d-flex justify-content-start">
+					chrome
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="clouds" class="col-6 d-flex justify-content-start">
+					clouds
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="clouds-midnight" class="col-6 d-flex justify-content-start">
+					clouds_midnight
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id=cobalt" class="col-6 d-flex justify-content-start">
+					cobalt
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="crimson-editor" class="col-6 d-flex justify-content-start">
+					crimson_editor
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="dawn" class="col-6 d-flex justify-content-start">
+					dawn
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="dracula" class="col-6 d-flex justify-content-start">
+					dracula
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="dreamweaver" class="col-6 d-flex justify-content-start">
+					dreamweaver
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="eclipse" class="col-6 d-flex justify-content-start">
+					eclipse
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="github" class="col-6 d-flex justify-content-start">
+					github
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="gob" class="col-6 d-flex justify-content-start">
+					gob
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="gruvbox" class="col-6 d-flex justify-content-start">
+					gruvbox
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="idle-fingers" class="col-6 d-flex justify-content-start">
+					idle_fingers
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="iplastic" class="col-6 d-flex justify-content-start">
+					iplastic
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="katzenmilch" class="col-6 d-flex justify-content-start">
+					katzenmilch
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="kr-theme" class="col-6 d-flex justify-content-start">
+					kr_theme
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="kuroir" class="col-6 d-flex justify-content-start">
+					kuroir
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="merbivore" class="col-6 d-flex justify-content-start">
+					merbivore
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="merbivore-soft" class="col-6 d-flex justify-content-start">
+					merbivore_soft
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="mono-industrial" class="col-6 d-flex justify-content-start">
+					mono_industrial
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="monokai"  class="col-6 d-flex justify-content-start" >
+					monokai
+				</div>
+				<div class="col-6 d-flex justify-content-end" onclick="themeMonokai()">
+					<label class="switch">
+  						<input type="checkbox" >
+ 						 <span class="slider round" ></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="nord-dark" class="col-6 d-flex justify-content-start">
+					nord_dark
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="pastel-on-dark" class="col-6 d-flex justify-content-start">
+					pastel_on_dark
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="solarized-light" class="col-6 d-flex justify-content-start">
+				solarized_light
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="solarized-dark" class="col-6 d-flex justify-content-start">
+				solarized_dark
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="sqlserver" class="col-6 d-flex justify-content-start">
+				sqlserver
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="terminal" class="col-6 d-flex justify-content-start">
+				terminal
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="textmate" class="col-6 d-flex justify-content-start">
+				textmate
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tomorrow" class="col-6 d-flex justify-content-start">
+				tomorrow
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tomorrow-night" class="col-6 d-flex justify-content-start">
+				tomorrow_night
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tomorrow-night-blue" class="col-6 d-flex justify-content-start">
+				tomorrow_night_blue
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tomorrow-night-bright" class="col-6 d-flex justify-content-start">
+				tomorrow_night_bright
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="tomorrow-night-eighties" class="col-6 d-flex justify-content-start">
+				tomorrow_night_eighties
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="twilight" class="col-6 d-flex justify-content-start">
+				twilight
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="vibrant-ink" class="col-6 d-flex justify-content-start">
+				vibrant_ink
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div id="xcode" class="col-6 d-flex justify-content-start">
+				xcode
+				</div>
+				<div class="col-6 d-flex justify-content-end">
+					<label class="switch">
+  						<input type="checkbox">
+ 						 <span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/theme.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/tools.js" type="text/javascript"></script>
+		<script src="js/attribute_functions.js" type="text/javascript"></script>
+    	<script src="js/elements.js" type="text/javascript"></script>
+   		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+</body>
+</html>
